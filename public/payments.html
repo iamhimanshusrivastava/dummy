@@ -52,11 +52,81 @@
           <a href="#">About Us</a>
         </nav>
         <div class="flex flex-1 items-center justify-end gap-x-8">
-          <a
-            href="#"
-            class="ml-6 inline-flex items-center rounded-md bg-gray-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
-            >Sign up</a
-          >
+          <div class="relative inline-block text-left">
+            <div>
+              <button
+                type="button"
+                id="menu-button"
+                aria-expanded="false"
+                aria-haspopup="true"
+                onclick="toggleDropdown()"
+              >
+                <img
+                  class="inline-block h-8 w-8 rounded-full"
+                  src="https://i.pinimg.com/564x/dc/fc/43/dcfc4399d2bdae945885f064e82c669d.jpg"
+                  alt="Profile Pic"
+                />
+              </button>
+            </div>
+
+            <div
+              class="dropdown absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="menu-button"
+              tabindex="-1"
+            >
+              <div class="px-4 py-3" role="none">
+                <p class="text-sm" role="none">Signed in as</p>
+                <p
+                  class="truncate text-sm font-medium text-gray-900"
+                  role="none"
+                >
+                  tom@example.com
+                </p>
+              </div>
+              <div class="py-1" role="none">
+                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                <a
+                  href="#"
+                  class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="menu-item-0"
+                  >Profile</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="menu-item-1"
+                  >Courses</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="menu-item-2"
+                  >Payment History</a
+                >
+              </div>
+              <div class="py-1" role="none">
+                <form method="POST" action="#" role="none">
+                  <button
+                    type="submit"
+                    class="text-gray-700 block w-full px-4 py-2 text-left text-sm hover:bg-gray-100 hover:text-gray-900"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="menu-item-3"
+                  >
+                    Sign out
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -132,141 +202,161 @@
     </header>
 
     <!-- Profile Section  -->
-    <main class="flex min-h-screen flex-col justify-center px-6 py-12 lg:px-8">
-      <div class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center">
-          <h2
-            class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
-          >
-            Profile
-          </h2>
-          <p class="mt-2 text-lg leading-8 text-gray-600">
-            Aute magna irure deserunt veniam aliqua magna enim voluptate.
-          </p>
+    <main class="flex min-h-screen flex-col px-6 py-12 lg:px-8">
+      <div class="py-16 sm:py-24">
+        <div class="mx-auto max-w-7xl sm:px-2 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center">
+            <h2
+              class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
+            >
+              Payment Details
+            </h2>
+            <p class="mt-2 text-lg leading-8 text-gray-600">
+              Check the payment details of recent enrolled courses.
+            </p>
+          </div>
         </div>
 
-        <div class="mt-16 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form action="#" method="POST">
-            <h2 class="text-base font-semibold leading-7 text-gray-900">
-              Personal Info
-            </h2>
-            <p class="mt-1 text-sm leading-6 text-gray-600">
-              This information will be displayed publicly so be careful what you
-              share.
-            </p>
-            <div class="border-b border-gray-900/10 pb-12 mt-6 space-y-6">
-              <div
-                class="rounded-md px-3 pb-1.5 pt-2.5 shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-indigo-600"
-              >
-                <label
-                  for="full-name"
-                  class="block text-sm font-medium leading-6 text-gray-900"
-                  >Full Name</label
-                >
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  class="block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                  placeholder="Ashish Shukla"
-                />
+        <div class="mt-16">
+          <div class="mx-auto max-w-7xl sm:px-2 lg:px-8">
+            <div
+              class="mx-auto max-w-2xl space-y-8 sm:px-4 lg:max-w-4xl lg:px-0"
+            >
+              <div class="border border-gray-200 bg-white shadow-sm rounded-lg">
+                <!-- Products -->
+                <ul role="list" class="divide-y divide-gray-200">
+                  <li class="p-4 sm:p-6">
+                    <div class="flex items-center sm:items-start">
+                      <div class="flex-1 text-sm">
+                        <div
+                          class="font-medium text-gray-900 sm:flex sm:justify-between"
+                        >
+                          <h5 class="sm:text-4xl text-2xl font-medium">
+                            Frontend Cohort
+                          </h5>
+                          <p
+                            class="mt-2 sm:mt-0 sm:text-3xl text-xl font-medium"
+                          >
+                            ₹18,999.00
+                          </p>
+                        </div>
+                        <p class="hidden text-gray-500 sm:mt-2 sm:block">
+                          Embark on a dynamic journey into the world of frontend
+                          web development with our "Frontend Cohort" course.
+                          This hands-on and beginner-friendly program is
+                          designed to empower you with the essential skills
+                          needed to create visually appealing and responsive
+                          websites.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="mt-6 sm:flex sm:justify-between">
+                      <div class="flex items-center">
+                        <svg
+                          class="h-5 w-5 text-green-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <p class="ml-2 text-sm font-medium text-gray-500">
+                          Enrolled on
+                          <time datetime="2021-07-12">Jan 18, 2024</time>
+                        </p>
+                      </div>
+
+                      <div
+                        class="mt-6 flex items-center space-x-4 divide-x divide-gray-200 border-t border-gray-200 pt-4 text-sm font-medium sm:ml-4 sm:mt-0 sm:border-none sm:pt-0"
+                      >
+                        <div class="flex flex-1 justify-center">
+                          <a
+                            href="#"
+                            class="whitespace-nowrap text-indigo-600 hover:text-indigo-500"
+                            >View Invoice</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <!-- More products... -->
+                </ul>
               </div>
 
-              <div
-                class="rounded-md px-3 pb-1.5 pt-2.5 shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-indigo-600"
-              >
-                <label
-                  for="email"
-                  class="block text-sm font-medium leading-6 text-gray-900"
-                  >Email address</label
-                >
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autocomplete="email"
-                  required
-                  class="block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                  placeholder="your@example.com"
-                />
-              </div>
+              <div class="border border-gray-200 bg-white shadow-sm rounded-lg">
+                <!-- Products -->
+                <ul role="list" class="divide-y divide-gray-200">
+                  <li class="p-4 sm:p-6">
+                    <div class="flex items-center sm:items-start">
+                      <div class="flex-1 text-sm">
+                        <div
+                          class="font-medium text-gray-900 sm:flex sm:justify-between"
+                        >
+                          <h5 class="sm:text-4xl text-2xl font-medium">
+                            Full Stack Cohort
+                          </h5>
+                          <p
+                            class="mt-2 sm:mt-0 sm:text-3xl text-xl font-medium"
+                          >
+                            ₹23,999.00
+                          </p>
+                        </div>
+                        <p class="hidden text-gray-500 sm:mt-2 sm:block">
+                          Embark on a comprehensive journey into the realm of
+                          web development with our "Full Stack Cohort". This
+                          immersive course is designed to equip you with the
+                          skills required to build dynamic, end-to-end web
+                          applications by mastering both frontend and backend
+                          development.
+                        </p>
+                      </div>
+                    </div>
 
-              <div
-                class="rounded-md px-3 pb-1.5 pt-2.5 shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-indigo-600"
-              >
-                <label
-                  for="phone-number"
-                  class="block text-sm font-medium leading-6 text-gray-900"
-                  >Phone number</label
-                >
-                <input
-                  type="tel"
-                  name="phone-number"
-                  id="phone-number"
-                  autocomplete="tel"
-                  class="block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                  placeholder="9XXXXXXXXX"
-                />
+                    <div class="mt-6 sm:flex sm:justify-between">
+                      <div class="flex items-center">
+                        <svg
+                          class="h-5 w-5 text-green-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <p class="ml-2 text-sm font-medium text-gray-500">
+                          Enrolled on
+                          <time datetime="2021-07-12">Jan 20, 2024</time>
+                        </p>
+                      </div>
+
+                      <div
+                        class="mt-6 flex items-center space-x-4 divide-x divide-gray-200 border-t border-gray-200 pt-4 text-sm font-medium sm:ml-4 sm:mt-0 sm:border-none sm:pt-0"
+                      >
+                        <div class="flex flex-1 justify-center">
+                          <a
+                            href="#"
+                            class="whitespace-nowrap text-indigo-600 hover:text-indigo-500"
+                            >View Invoice</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <!-- More products... -->
+                </ul>
               </div>
             </div>
-
-            <h2 class="mt-11 text-base font-semibold leading-7 text-gray-900">
-              Educational Info
-            </h2>
-            <p class="mt-1 text-sm leading-6 text-gray-600">
-              This information will be displayed publicly so be careful what you
-              share.
-            </p>
-            <div class="border-b border-gray-900/10 pb-12 mt-6 space-y-6">
-              <div
-                class="rounded-md px-3 pb-1.5 pt-2.5 shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-indigo-600"
-              >
-                <label
-                  for="your-school-college"
-                  class="block text-sm font-medium leading-6 text-gray-900"
-                  >Your School / College</label
-                >
-                <input
-                  id="your-school-college"
-                  name="your-school-college"
-                  type="text"
-                  autocomplete=""
-                  required
-                  class="block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                  placeholder="Banaras Hindu University"
-                />
-              </div>
-
-              <div
-                class="rounded-md px-3 pb-1.5 pt-2.5 shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-indigo-600"
-              >
-                <label
-                  for="course"
-                  class="block text-sm font-medium leading-6 text-gray-900"
-                  >Course</label
-                >
-                <input
-                  <input
-                  id="course"
-                  name="course"
-                  type="text"
-                  autocomplete=""
-                  required
-                  class="block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                  placeholder="B.Tech"
-                />
-              </div>
-            </div>
-
-            <div class="mt-6 flex items-center justify-end">
-              <button
-                type="submit"
-                class="flex w-full justify-center rounded-md bg-gray-900 px-3 py-3 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
-              >
-                Save
-              </button>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
     </main>
@@ -384,6 +474,32 @@
 
       // Event listener for the close button
       closeButton.addEventListener("click", closeMobileMenu);
+    </script>
+    <script>
+      let isDropdownVisible = false;
+
+      function toggleDropdown() {
+        const dropdown = document.querySelector(".dropdown");
+        isDropdownVisible = !isDropdownVisible;
+
+        dropdown.setAttribute("aria-expanded", String(isDropdownVisible));
+        dropdown.classList.toggle("hidden", !isDropdownVisible);
+      }
+
+      document.addEventListener("click", function (event) {
+        const dropdown = document.querySelector(".dropdown");
+        const button = document.getElementById("menu-button");
+
+        if (
+          !button.contains(event.target) &&
+          !dropdown.contains(event.target)
+        ) {
+          // Clicked outside the button and the dropdown, so close the dropdown
+          isDropdownVisible = false;
+          dropdown.setAttribute("aria-expanded", "false");
+          dropdown.classList.add("hidden");
+        }
+      });
     </script>
   </body>
 </html>

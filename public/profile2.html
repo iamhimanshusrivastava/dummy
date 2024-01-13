@@ -52,11 +52,81 @@
           <a href="#">About Us</a>
         </nav>
         <div class="flex flex-1 items-center justify-end gap-x-8">
-          <a
-            href="#"
-            class="ml-6 inline-flex items-center rounded-md bg-gray-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
-            >Sign up</a
-          >
+          <div class="relative inline-block text-left">
+            <div>
+              <button
+                type="button"
+                id="menu-button"
+                aria-expanded="false"
+                aria-haspopup="true"
+                onclick="toggleDropdown()"
+              >
+                <img
+                  class="inline-block h-8 w-8 rounded-full"
+                  src="https://i.pinimg.com/564x/dc/fc/43/dcfc4399d2bdae945885f064e82c669d.jpg"
+                  alt="Profile Pic"
+                />
+              </button>
+            </div>
+
+            <div
+              class="dropdown absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="menu-button"
+              tabindex="-1"
+            >
+              <div class="px-4 py-3" role="none">
+                <p class="text-sm" role="none">Signed in as</p>
+                <p
+                  class="truncate text-sm font-medium text-gray-900"
+                  role="none"
+                >
+                  tom@example.com
+                </p>
+              </div>
+              <div class="py-1" role="none">
+                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                <a
+                  href="#"
+                  class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="menu-item-0"
+                  >Profile</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="menu-item-1"
+                  >Courses</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="menu-item-2"
+                  >Payment History</a
+                >
+              </div>
+              <div class="py-1" role="none">
+                <form method="POST" action="#" role="none">
+                  <button
+                    type="submit"
+                    class="text-gray-700 block w-full px-4 py-2 text-left text-sm hover:bg-gray-100 hover:text-gray-900"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="menu-item-3"
+                  >
+                    Sign out
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -155,60 +225,58 @@
               share.
             </p>
             <div class="border-b border-gray-900/10 pb-12 mt-6 space-y-6">
-              <div>
+              <div
+                class="rounded-md px-3 pb-1.5 pt-2.5 shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-gray-600"
+              >
                 <label
                   for="full-name"
                   class="block text-sm font-medium leading-6 text-gray-900"
                   >Full Name</label
                 >
-                <div class="mt-2">
-                  <input
-                    id="full-name"
-                    name="full-name"
-                    type="text"
-                    autocomplete="given-name"
-                    required
-                    class="block w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
-                    placeholder="Ashish Shukla"
-                  />
-                </div>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                  placeholder="Ashish Shukla"
+                />
               </div>
 
-              <div>
+              <div
+                class="rounded-md px-3 pb-1.5 pt-2.5 shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-gray-600"
+              >
                 <label
                   for="email"
                   class="block text-sm font-medium leading-6 text-gray-900"
                   >Email address</label
                 >
-                <div class="mt-2">
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autocomplete="email"
-                    required
-                    class="block w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
-                    placeholder="your@example.com"
-                  />
-                </div>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  class="block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                  placeholder="your@example.com"
+                />
               </div>
 
-              <div>
+              <div
+                class="rounded-md px-3 pb-1.5 pt-2.5 shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-gray-600"
+              >
                 <label
                   for="phone-number"
                   class="block text-sm font-medium leading-6 text-gray-900"
                   >Phone number</label
                 >
-                <div class="mt-2">
-                  <input
-                    type="tel"
-                    name="phone-number"
-                    id="phone-number"
-                    autocomplete="tel"
-                    class="block w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
-                    placeholder="9XXXXXXXXX"
-                  />
-                </div>
+                <input
+                  type="tel"
+                  name="phone-number"
+                  id="phone-number"
+                  autocomplete="tel"
+                  class="block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                  placeholder="9XXXXXXXXX"
+                />
               </div>
             </div>
 
@@ -220,42 +288,43 @@
               share.
             </p>
             <div class="border-b border-gray-900/10 pb-12 mt-6 space-y-6">
-              <div>
+              <div
+                class="rounded-md px-3 pb-1.5 pt-2.5 shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-gray-600"
+              >
                 <label
                   for="your-school-college"
                   class="block text-sm font-medium leading-6 text-gray-900"
                   >Your School / College</label
                 >
-                <div class="mt-2">
-                  <input
-                    id="your-school-college"
-                    name="your-school-college"
-                    type="text"
-                    autocomplete=""
-                    required
-                    class="block w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
-                    placeholder="Banaras Hindu University"
-                  />
-                </div>
+                <input
+                  id="your-school-college"
+                  name="your-school-college"
+                  type="text"
+                  autocomplete=""
+                  required
+                  class="block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                  placeholder="Banaras Hindu University"
+                />
               </div>
 
-              <div>
+              <div
+                class="rounded-md px-3 pb-1.5 pt-2.5 shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-gray-600"
+              >
                 <label
                   for="course"
                   class="block text-sm font-medium leading-6 text-gray-900"
                   >Course</label
                 >
-                <div class="mt-2">
+                <input
                   <input
-                    id="course"
-                    name="course"
-                    type="text"
-                    autocomplete=""
-                    required
-                    class="block w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
-                    placeholder="B.Tech"
-                  />
-                </div>
+                  id="course"
+                  name="course"
+                  type="text"
+                  autocomplete=""
+                  required
+                  class="block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                  placeholder="B.Tech"
+                />
               </div>
             </div>
 
@@ -385,6 +454,32 @@
 
       // Event listener for the close button
       closeButton.addEventListener("click", closeMobileMenu);
+    </script>
+    <script>
+      let isDropdownVisible = false;
+
+      function toggleDropdown() {
+        const dropdown = document.querySelector(".dropdown");
+        isDropdownVisible = !isDropdownVisible;
+
+        dropdown.setAttribute("aria-expanded", String(isDropdownVisible));
+        dropdown.classList.toggle("hidden", !isDropdownVisible);
+      }
+
+      document.addEventListener("click", function (event) {
+        const dropdown = document.querySelector(".dropdown");
+        const button = document.getElementById("menu-button");
+
+        if (
+          !button.contains(event.target) &&
+          !dropdown.contains(event.target)
+        ) {
+          // Clicked outside the button and the dropdown, so close the dropdown
+          isDropdownVisible = false;
+          dropdown.setAttribute("aria-expanded", "false");
+          dropdown.classList.add("hidden");
+        }
+      });
     </script>
   </body>
 </html>
