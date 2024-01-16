@@ -2,204 +2,151 @@
 <html class="h-full bg-white">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <style>
+      [x-cloak] {
+        display: none;
+      }
+    </style>
+    <!-- Include the Alpine library on your page -->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <!-- Include the TailwindCSS library on your page -->
     <link href="css/output.css" rel="stylesheet" />
   </head>
   <body class="relative h-full font-geist">
     <!-- Header Section -->
-    <header
-      class="absolute inset-x-0 top-0 z-50 flex h-16 border-b border-gray-900/10"
+    <section class="relative w-full px-8 text-gray-700 bg-white body-font"
+    data-tails-scripts="//unpkg.com/alpinejs" {!! $attributes ?? '' !!}>
+    <div
+      class="container flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl"
     >
-      <div
-        class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+      <a
+        href="#_"
+        class="relative z-10 flex items-center w-auto text-2xl font-extrabold leading-none text-black select-none"
+        >tails.</a
       >
-        <div class="flex flex-1 items-center gap-x-6">
-          <button id="open" type="button" class="-m-3 p-3 md:hidden">
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="h-5 w-5 text-gray-900"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </button>
-          <svg
-            class="h-8 w-auto"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
+
+      <nav
+        class="top-0 left-0 z-0 flex items-center justify-center w-full h-full py-5 -ml-0 space-x-5 text-base md:-ml-5 md:py-0 md:absolute"
+      >
+        <a
+          href="#_"
+          class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900"
+          x-data="{ hover: false }"
+          @mouseenter="hover = true"
+          @mouseleave="hover = false"
+        >
+          <span class="block">Home</span>
+          <span
+            class="absolute bottom-0 left-0 inline-block w-full h-0.5 -mb-1 overflow-hidden"
           >
-            <g data-name="54.Code">
-              <path
-                d="M12 24a12 12 0 1 1 12-12 12.013 12.013 0 0 1-12 12zm0-22a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2z"
-              />
-              <path
-                d="M9.293 16.707 4.586 12l4.707-4.707 1.414 1.414L7.414 12l3.293 3.293-1.414 1.414zM14.707 16.707l-1.414-1.414L16.586 12l-3.293-3.293 1.414-1.414L19.414 12l-4.707 4.707z"
-              />
-            </g>
-          </svg>
-        </div>
-        <nav
-          class="hidden md:flex md:gap-x-11 md:text-sm md:font-semibold md:leading-6 md:text-gray-700"
+            <span
+              x-show="hover"
+              class="absolute inset-0 inline-block w-full h-full transform bg-gray-900"
+              x-transition:enter="transition ease duration-200"
+              x-transition:enter-start="scale-0"
+              x-transition:enter-end="scale-100"
+              x-transition:leave="transition ease-out duration-300"
+              x-transition:leave-start="scale-100"
+              x-transition:leave-end="scale-0"
+            ></span>
+          </span>
+        </a>
+        <a
+          href="#_"
+          class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900"
+          x-data="{ hover: false }"
+          @mouseenter="hover = true"
+          @mouseleave="hover = false"
         >
-          <a href="#">Free Classes</a>
-          <a href="#">Courses</a>
-          <a href="#">About Us</a>
-        </nav>
-        <div class="flex flex-1 items-center justify-end gap-x-8">
-          <div class="relative inline-block text-left">
-            <div>
-              <button
-                type="button"
-                id="menu-button"
-                aria-expanded="false"
-                aria-haspopup="true"
-                onclick="toggleDropdown()"
-              >
-                <img
-                  class="inline-block h-8 w-8 rounded-full"
-                  src="https://i.pinimg.com/564x/dc/fc/43/dcfc4399d2bdae945885f064e82c669d.jpg"
-                  alt="Profile Pic"
-                />
-              </button>
-            </div>
+          <span class="block">Features</span>
+          <span
+            class="absolute bottom-0 left-0 inline-block w-full h-0.5 -mb-1 overflow-hidden"
+          >
+            <span
+              x-show="hover"
+              class="absolute inset-0 inline-block w-full h-full transform bg-gray-900"
+              x-transition:enter="transition ease duration-200"
+              x-transition:enter-start="scale-0"
+              x-transition:enter-end="scale-100"
+              x-transition:leave="transition ease-out duration-300"
+              x-transition:leave-start="scale-100"
+              x-transition:leave-end="scale-0"
+            ></span>
+          </span>
+        </a>
+        <a
+          href="#_"
+          class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900"
+          x-data="{ hover: false }"
+          @mouseenter="hover = true"
+          @mouseleave="hover = false"
+        >
+          <span class="block">Pricing</span>
+          <span
+            class="absolute bottom-0 left-0 inline-block w-full h-0.5 -mb-1 overflow-hidden"
+          >
+            <span
+              x-show="hover"
+              class="absolute inset-0 inline-block w-full h-full transform bg-gray-900"
+              x-transition:enter="transition ease duration-200"
+              x-transition:enter-start="scale-0"
+              x-transition:enter-end="scale-100"
+              x-transition:leave="transition ease-out duration-300"
+              x-transition:leave-start="scale-100"
+              x-transition:leave-end="scale-0"
+            ></span>
+          </span>
+        </a>
+        <a
+          href="#_"
+          class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900"
+          x-data="{ hover: false }"
+          @mouseenter="hover = true"
+          @mouseleave="hover = false"
+        >
+          <span class="block">Blog</span>
+          <span
+            class="absolute bottom-0 left-0 inline-block w-full h-0.5 -mb-1 overflow-hidden"
+          >
+            <span
+              x-show="hover"
+              class="absolute inset-0 inline-block w-full h-full transform bg-gray-900"
+              x-transition:enter="transition ease duration-200"
+              x-transition:enter-start="scale-0"
+              x-transition:enter-end="scale-100"
+              x-transition:leave="transition ease-out duration-300"
+              x-transition:leave-start="scale-100"
+              x-transition:leave-end="scale-0"
+            ></span>
+          </span>
+        </a>
+      </nav>
 
-            <div
-              class="dropdown absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
-              role="menu"
-              aria-orientation="vertical"
-              aria-labelledby="menu-button"
-              tabindex="-1"
-            >
-              <div class="px-4 py-3" role="none">
-                <p class="text-sm" role="none">Signed in as</p>
-                <p
-                  class="truncate text-sm font-medium text-gray-900"
-                  role="none"
-                >
-                  tom@example.com
-                </p>
-              </div>
-              <div class="py-1" role="none">
-                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                <a
-                  href="#"
-                  class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="menu-item-0"
-                  >Profile</a
-                >
-                <a
-                  href="#"
-                  class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="menu-item-1"
-                  >Courses</a
-                >
-                <a
-                  href="#"
-                  class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="menu-item-2"
-                  >Payment History</a
-                >
-              </div>
-              <div class="py-1" role="none">
-                <form method="POST" action="#" role="none">
-                  <button
-                    type="submit"
-                    class="text-gray-700 block w-full px-4 py-2 text-left text-sm hover:bg-gray-100 hover:text-gray-900"
-                    role="menuitem"
-                    tabindex="-1"
-                    id="menu-item-3"
-                  >
-                    Sign out
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile menu, show/hide based on menu open state. -->
       <div
-        id="mobileMenu"
-        class="lg:hidden hidden transition-transform duration-300 ease-in-out transform -translate-x-full trans fixed inset-y-0 left-0 z-50 w-full overflow-y-auto bg-white px-4 pb-6 sm:max-w-sm sm:px-6 sm:ring-1 sm:ring-gray-900/10"
-        role="dialog"
-        aria-modal="true"
+        class="relative z-10 inline-flex items-center space-x-3 md:ml-5 lg:justify-end"
       >
-        <!-- Background backdrop, show/hide based on slide-over state. -->
-        <div class="fixed inset-0 z-50 backdrop-filter backdrop-blur"></div>
-        <div
-          class="fixed inset-y-0 left-0 z-50 w-full overflow-y-auto bg-white px-4 pb-6 sm:max-w-sm sm:px-6 sm:ring-1 sm:ring-gray-900/10"
+        <a
+          href="#"
+          class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium tracking-wide transition-colors duration-200 bg-white border rounded-md text-neutral-500 hover:text-neutral-700 border-neutral-200/70 hover:bg-neutral-100 active:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-200/60 focus:shadow-outline"
+          data-rounded="rounded-md"
         >
-          <div class="-ml-0.5 flex h-16 items-center gap-x-6">
-            <button id="close" type="button" class="-m-2.5 p-2.5 text-gray-700">
-              <span class="sr-only">Close menu</span>
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-            <div class="-ml-0.5">
-              <a href="#" class="-m-1.5 block p-1.5">
-                <span class="sr-only">Your Company</span>
-                <svg
-                  class="h-8 w-auto"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                >
-                  <g data-name="54.Code">
-                    <path
-                      d="M12 24a12 12 0 1 1 12-12 12.013 12.013 0 0 1-12 12zm0-22a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2z"
-                    />
-                    <path
-                      d="M9.293 16.707 4.586 12l4.707-4.707 1.414 1.414L7.414 12l3.293 3.293-1.414 1.414zM14.707 16.707l-1.414-1.414L16.586 12l-3.293-3.293 1.414-1.414L19.414 12l-4.707 4.707z"
-                    />
-                  </g>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="mt-2 space-y-2">
-            <a
-              href="#"
-              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-              >Free Classes</a
-            >
-            <a
-              href="#"
-              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-              >Courses</a
-            >
-            <a
-              href="#"
-              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-              >About Us</a
-            >
-          </div>
-        </div>
+          Sign in
+        </a>
+        <span class="inline-flex rounded-md shadow-sm">
+          <a
+            href="#"
+            class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none"
+            data-rounded="rounded-md"
+            data-primary="blue-600"
+          >
+            Sign up
+          </a>
+        </span>
       </div>
-    </header>
+    </div>
 
     <!-- Profile Section  -->
     <main class="flex min-h-screen flex-col px-6 py-12 lg:px-8">
@@ -362,18 +309,68 @@
     </main>
 
     <!-- Footer Section -->
-    <footer class="bg-white">
+    <section class="bg-white">
       <div
-        class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8"
+        class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8"
       >
-        <div class="flex justify-center space-x-6 md:order-2">
-          <a href="#" class="text-gray-400 hover:text-gray-700">
+        <nav class="flex flex-wrap justify-center -mx-5 -my-2">
+          <div class="px-5 py-2">
+            <a
+              href="#"
+              class="text-base leading-6 text-gray-500 hover:text-gray-900"
+            >
+              About
+            </a>
+          </div>
+          <div class="px-5 py-2">
+            <a
+              href="#"
+              class="text-base leading-6 text-gray-500 hover:text-gray-900"
+            >
+              Blog
+            </a>
+          </div>
+          <div class="px-5 py-2">
+            <a
+              href="#"
+              class="text-base leading-6 text-gray-500 hover:text-gray-900"
+            >
+              Team
+            </a>
+          </div>
+          <div class="px-5 py-2">
+            <a
+              href="#"
+              class="text-base leading-6 text-gray-500 hover:text-gray-900"
+            >
+              Pricing
+            </a>
+          </div>
+          <div class="px-5 py-2">
+            <a
+              href="#"
+              class="text-base leading-6 text-gray-500 hover:text-gray-900"
+            >
+              Contact
+            </a>
+          </div>
+          <div class="px-5 py-2">
+            <a
+              href="#"
+              class="text-base leading-6 text-gray-500 hover:text-gray-900"
+            >
+              Terms
+            </a>
+          </div>
+        </nav>
+        <div class="flex justify-center mt-8 space-x-6">
+          <a href="#" class="text-gray-400 hover:text-gray-500">
             <span class="sr-only">Facebook</span>
             <svg
-              class="h-6 w-6"
+              class="w-6 h-6"
+              aria-hidden="true"
               fill="currentColor"
               viewBox="0 0 24 24"
-              aria-hidden="true"
             >
               <path
                 fill-rule="evenodd"
@@ -382,13 +379,13 @@
               />
             </svg>
           </a>
-          <a href="#" class="text-gray-400 hover:text-gray-700">
+          <a href="#" class="text-gray-400 hover:text-gray-500">
             <span class="sr-only">Instagram</span>
             <svg
-              class="h-6 w-6"
+              class="w-6 h-6"
+              aria-hidden="true"
               fill="currentColor"
               viewBox="0 0 24 24"
-              aria-hidden="true"
             >
               <path
                 fill-rule="evenodd"
@@ -397,26 +394,26 @@
               />
             </svg>
           </a>
-          <a href="#" class="text-gray-400 hover:text-gray-700">
+          <a href="#" class="text-gray-400 hover:text-gray-500">
             <span class="sr-only">Twitter</span>
             <svg
-              class="h-6 w-6"
+              class="w-6 h-6"
+              aria-hidden="true"
               fill="currentColor"
               viewBox="0 0 24 24"
-              aria-hidden="true"
             >
               <path
                 d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
               />
             </svg>
           </a>
-          <a href="#" class="text-gray-400 hover:text-gray-700">
+          <a href="#" class="text-gray-400 hover:text-gray-500">
             <span class="sr-only">GitHub</span>
             <svg
-              class="h-6 w-6"
+              class="w-6 h-6"
+              aria-hidden="true"
               fill="currentColor"
               viewBox="0 0 24 24"
-              aria-hidden="true"
             >
               <path
                 fill-rule="evenodd"
@@ -425,81 +422,26 @@
               />
             </svg>
           </a>
-          <a href="#" class="text-gray-400 hover:text-gray-700">
-            <span class="sr-only">YouTube</span>
+          <a href="#" class="text-gray-400 hover:text-gray-500">
+            <span class="sr-only">Dribbble</span>
             <svg
-              class="h-6 w-6"
+              class="w-6 h-6"
+              aria-hidden="true"
               fill="currentColor"
               viewBox="0 0 24 24"
-              aria-hidden="true"
             >
               <path
                 fill-rule="evenodd"
-                d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
                 clip-rule="evenodd"
               />
             </svg>
           </a>
         </div>
-        <div class="mt-8 md:order-1 md:mt-0">
-          <p class="text-center text-xs leading-5 text-gray-500">
-            &copy; 2024 Codekaro. All rights reserved.
-          </p>
-        </div>
+        <p class="mt-8 text-base leading-6 text-center text-gray-400">
+          &copy; 2024 Codekaro All rights reserved.
+        </p>
       </div>
-    </footer>
-
-    <script>
-      // Get references to the elements
-      const openButton = document.getElementById("open");
-      const closeButton = document.getElementById("close");
-      const mobileMenu = document.getElementById("mobileMenu");
-
-      // Function to open the mobile menu
-      function openMobileMenu() {
-        mobileMenu.classList.remove("hidden");
-        mobileMenu.classList.remove("-translate-x-full");
-      }
-
-      // Function to close the mobile menu
-      function closeMobileMenu() {
-        mobileMenu.classList.add("-translate-x-full");
-        setTimeout(() => {
-          mobileMenu.classList.add("hidden");
-        }, 300); // Delay the 'hidden' class to match the transition duration
-      }
-
-      // Event listener for the open button
-      openButton.addEventListener("click", openMobileMenu);
-
-      // Event listener for the close button
-      closeButton.addEventListener("click", closeMobileMenu);
-    </script>
-    <script>
-      let isDropdownVisible = false;
-
-      function toggleDropdown() {
-        const dropdown = document.querySelector(".dropdown");
-        isDropdownVisible = !isDropdownVisible;
-
-        dropdown.setAttribute("aria-expanded", String(isDropdownVisible));
-        dropdown.classList.toggle("hidden", !isDropdownVisible);
-      }
-
-      document.addEventListener("click", function (event) {
-        const dropdown = document.querySelector(".dropdown");
-        const button = document.getElementById("menu-button");
-
-        if (
-          !button.contains(event.target) &&
-          !dropdown.contains(event.target)
-        ) {
-          // Clicked outside the button and the dropdown, so close the dropdown
-          isDropdownVisible = false;
-          dropdown.setAttribute("aria-expanded", "false");
-          dropdown.classList.add("hidden");
-        }
-      });
-    </script>
+    </section>
   </body>
 </html>
