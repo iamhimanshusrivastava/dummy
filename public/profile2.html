@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pines UI</title>
+    <style>[x-cloak]{display:none}</style>
+    <!-- Include the Alpine library on your page -->
+    
+    <!-- Include the TailwindCSS library on your page -->
+    <link href="css/output.css" rel="stylesheet" />
+</head>
+<body class="">
+
+<div id="sticky-header" class="fixed top-0 z-[60] flex items-center justify-center w-full h-16 duration-500 ease-out bg-white border-b bg-opacity-90 backdrop-blur-md border-neutral-400 border-opacity-20">
+<div class="flex items-center justify-between w-full px-4 mx-auto 2xl:px-0 max-w-7xl">
+<div class="relative z-10 flex items-center w-auto leading-10 lg:flex-grow-0 lg:flex-shrink-0 lg:text-left">
+<button @click="sidebarOpen=!sidebarOpen" class="flex items-center justify-center w-8 h-8 mr-3 border rounded-md lg:hidden border-neutral-200 text-neutral-800 hover:text-black hover:bg-neutral-100 active:bg-white">
+<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="none"><path d="M2.74902 6.75C2.74902 5.09315 4.09217 3.75 5.74902 3.75H18.2507C19.9075 3.75 21.2507 5.09315 21.2507 6.75V17.25C21.2507 18.9069 19.9075 20.25 18.2507 20.25H5.74902C4.09217 20.25 2.74902 18.9069 2.74902 17.25V6.75Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13.75 3.75V20.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16.75 7.75L18.25 7.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16.75 11L18.25 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16.75 14.25L18.25 14.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+</button>
+<a href="/" class="inline-flex sm:mr-8 items-end font-sans text-2xl font-extrabold text-left text-black no-underline bg-transparent cursor-pointer group focus:no-underline">
+<svg class="w-auto lg:h-6 h-5" viewBox="0 0 355 99" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M119.1 87V66.4h19.8c34.3 0 34.2-49.5 0-49.5-11 0-22 .1-33 .1v70h13.2zm19.8-32.7h-19.8V29.5h19.8c16.8 0 16.9 24.8 0 24.8zm32.6-30.5c0 9.5 14.4 9.5 14.4 0s-14.4-9.5-14.4 0zM184.8 87V37.5h-12.2V87h12.2zm22.8 0V61.8c0-7.5 5.1-13.8 12.6-13.8 7.8 0 11.9 5.7 11.9 13.2V87h12.2V61.1c0-15.5-9.3-24.2-20.9-24.2-6.2 0-11.2 2.5-16.2 7.4l-.8-6.7h-10.9V87h12.1zm72.1 1.3c7.5 0 16-2.6 21.2-8l-7.8-7.7c-2.8 2.9-8.7 4.6-13.2 4.6-8.6 0-13.9-4.4-14.7-10.5h38.5c1.9-20.3-8.4-30.5-24.9-30.5-16 0-26.2 10.8-26.2 25.8 0 15.8 10.1 26.3 27.1 26.3zM292 56.6h-26.6c1.8-6.4 7.2-9.6 13.8-9.6 7 0 12 3.2 12.8 9.6zm41.2 32.1c14.1 0 21.2-7.5 21.2-16.2 0-13.1-11.8-15.2-21.1-15.8-6.3-.4-9.2-2.2-9.2-5.4 0-3.1 3.2-4.9 9-4.9 4.7 0 8.7 1.1 12.2 4.4l6.8-8c-5.7-5-11.5-6.5-19.2-6.5-9 0-20.8 4-20.8 15.4 0 11.2 11.1 14.6 20.4 15.3 7 .4 9.8 1.8 9.8 5.2 0 3.6-4.3 6-8.9 5.9-5.5-.1-13.5-3-17-6.9l-6 8.7c7.2 7.5 15 8.8 22.8 8.8z" id="a" /></defs><g fill="none" fill-rule="evenodd"><g fill="currentColor"><path d="M19.742 49h28.516L68 83H0l19.742-34z" /><path d="M26 69h14v30H26V69zM4 50L33.127 0 63 50H4z" /></g><g fill-rule="nonzero"><use fill="currentColor" xlink:href="#a" /><use fill="currentColor" xlink:href="#a" /></g></g></svg>
+<span class="flex opacity-90 group-hover:scale-150 group-hover:opacity-100 items-center h-full group-hover:-rotate-6 ease-out duration-500 px-0.5 py-px ml-2 -translate-x-px text-[0.65rem] font-bold leading-none border-[2px] rounded border-black -translate-y-px">CK</span>
+</a>
+<nav class="items-center hidden space-x-5 text-sm font-medium lg:flex">
+<a class="relative transition-colors text-black group" href="/pines/docs/introduction">
+<span>Documentation</span>
+<span class="absolute bottom-0 w-0 h-0.5 duration-300 ease-out bg-black group-hover:w-full left-1/2 group-hover:left-0 group-hover:-translate-x-0"></span>
+</a>
+<a class="relative transition-colors text-neutral-700 hover:text-black group" href="/pines/docs/accordion">
+<span>Elements</span>
+<span class="absolute bottom-0 w-0 h-0.5 duration-300 ease-out bg-black group-hover:w-full left-1/2 group-hover:left-0 group-hover:-translate-x-0"></span>
+</a>
+
+<span class="absolute bottom-0 w-0 h-0.5 duration-300 ease-out bg-black group-hover:w-full left-1/2 group-hover:left-0 group-hover:-translate-x-0"></span>
+</a>
+<a class="relative hidden transition-colors text-neutral-700 hover:text-black group" href="/pines/examples">
+<span>Examples</span>
+<span class="absolute bottom-0 w-0 h-0.5 duration-300 ease-out bg-black group-hover:w-full left-1/2 group-hover:left-0 group-hover:-translate-x-0"></span>
+</a>
+<a class="relative transition-colors text-neutral-700 hover:text-black group" target="_blank" href="https://github.com/thedevdojo/pines">
+<span>Github</span>
+<span class="absolute bottom-0 w-0 h-0.5 duration-300 ease-out bg-black group-hover:w-full left-1/2 group-hover:left-0 group-hover:-translate-x-0"></span>
+</a>
+</nav>
+</div>
+<div class="relative">
+<div x-data="{
+        dropdownOpen: false
+    }" class="relative">
+<button :class="{ 'hover:bg-white' : !dropdownOpen, 'bg-white' : dropdownOpen }" @click="dropdownOpen=true" class="inline-flex items-center justify-center h-12 py-2 pl-3 pr-0 text-sm font-medium transition-colors bg-white border-0 rounded-md text-neutral-700 focus:outline-none disabled:opacity-50 disabled:pointer-events-none">
+<img src="https://cdn.devdojo.com/users/default.png" class="object-cover w-8 h-8 border rounded-full border-neutral-200" />
+<span class="flex flex-col items-start flex-shrink-0 h-full ml-2 leading-none translate-y-px">
+<!-- <span>Ashish Shukla</span>
+<span class="text-xs font-light text-neutral-400">@akshkgd</span>
+</span> -->
+<!-- <svg class="absolute right-0 w-5 h-5 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" /></svg> -->
+</button>
+<div x-show="dropdownOpen" @click.away="dropdownOpen=false" x-transition:enter="ease-out duration-200" x-transition:enter-start="-translate-y-2" x-transition:enter-end="translate-y-0" class="absolute top-0 right-0 z-50 w-56 mt-12" x-cloak>
+<div class="p-1 mt-1 bg-white border rounded-lg shadow- border-neutral-200/70 text-neutral-700">
+<!-- <div class="px-2 py-1.5 text-sm font-semibold">My Account</div> -->
+<!-- <div class="h-px my-1 -mx-1 bg-neutral-200"></div> -->
+<a href="/akshkgd" target="_blank" class="relative flex cursor-default select-none hover:bg-neutral-100 items-center rounded px-2 py-1.5 text-sm outline-none transition-colors data-[disabled]:pointer-events-none data-[disabled]:opacity-50">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+<span>Profile</span>
+</a>
+<a href="/settings" target="_blank" class="relative flex cursor-default select-none hover:bg-neutral-100 items-center rounded px-2 py-1.5 text-sm outline-none transition-colors data-[disabled]:pointer-events-none data-[disabled]:opacity-50">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+<span>Settings</span>
+</a>
+<a href="https://github.com/thedevdojo/pines" target="_blank" class="relative flex cursor-default select-none hover:bg-neutral-100 items-center rounded px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+<span>GitHub Repo</span>
+</a>
+
+<div class="h-px my-1 -mx-1 bg-neutral-200"></div>
+<a href="/logout" class="relative flex cursor-default select-none hover:bg-neutral-100 items-center rounded px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" x2="9" y1="12" y2="12"></line></svg>
+<span>Log out</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Sign in Section  -->
+<main class="mt-32  flex flex-col justify-center align-middle px-6 py-12 lg:px-8">
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+      
+      <h2 class=" text-2xl font-bold leading-9 tracking-tight text-gray-900">
+        Hey Ashish, Complete your profile!
+      </h2>
+    </div>
+
+    <div class="mt-2 sm:mx-auto sm:w-full sm:max-w-sm">
+      <div class="relative">
+        <div class="absolute flex items-center" aria-hidden="true">
+          <div class="w-full border-t border-gray-200"></div>
+        </div>
+        <div class="relative flex justify-cente text-md leading-6">
+          <span class="bg-white text-gray-500"
+            >Login to your account to see all your courses <br />
+            and upcoming classes.</span
+          >
+        </div>
+      </div>
+      <div class="relative w-full mt-2 content">
+            <!-- Tab Content 1 - Replace with your content -->
+            <div class="bg-card text-neutral-900 mt-5">
+                <!-- <div class="flex flex-col space-y-1.5">
+                    <h3 class="text-lg font-semibold leading-none tracking-tight">Account</h3>
+                    <p class="text-sm text-neutral-500">Make changes to your account here. Click save when you're done.</p>
+                </div> -->
+                <div class="pt-0 space-y-2">
+                    <div class="space-y-1"><label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="name">Name</label><input type="text" placeholder="Name" id="name" value="Adam Wathan" class="flex w-full h-10 px-3 py-6 text-sm bg-white border rounded-lg peer border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50" /></div>
+                    <div class="space-y-1"><label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="username">Username</label><input type="text" placeholder="Username" id="username" value="@adamwathan" class="flex w-full h-10 px-3 py-6 text-sm bg-white border rounded-lg peer border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50" /></div>
+                </div>
+                <div class="flex items-center pt-0 mt-3"><button type="button" class="inline-flex items-center justify-center px-4 py-3 text-sm font-normal tracking-wide text-white transition-colors duration-200 rounded-lg bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">Save changes</button></div>
+            </div>
+    </div>
+    <div class="relative w-full mt-10 content">
+      <!-- Tab Content 1 - Replace with your content -->
+      <div class="bg-card text-neutral-900">
+          <div class="flex flex-col space-y-1.5">
+              <h3 class="text-lg font-semibold leading-none tracking-tight">Educational info</h3>
+              <p class="text-sm text-neutral-500">Make changes to your account here. Click save when you're done.</p>
+          </div>
+          <div class="pt-0 space-y-2 mt-5">
+              <div class="space-y-1"><label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="name">Name</label><input type="text" placeholder="Name" id="name" value="Adam Wathan" class="flex w-full h-10 px-3 py-6 text-sm bg-white border rounded-lg peer border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50" /></div>
+              <div class="space-y-1"><label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="username">Username</label><input type="text" placeholder="Username" id="username" value="@adamwathan" class="flex w-full h-10 px-3 py-6 text-sm bg-white border rounded-lg peer border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50" /></div>
+          </div>
+          <div class="flex items-center pt-0 mt-3"><button type="button" class="inline-flex items-center justify-center px-4 py-3 text-sm font-normal tracking-wide text-white transition-colors duration-200 rounded-lg bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">Save changes</button></div>
+      </div>
+</div>
+  </main>
+
+
+<script src="https://unpkg.com/alpinejs" defer></script> 
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
