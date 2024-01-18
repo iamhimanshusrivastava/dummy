@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile</title>
+    <title>Profile 3</title>
     <style>
       [x-cloak] {
         display: none;
@@ -15,8 +15,7 @@
     <!-- Include the TailwindCSS library on your page -->
     <link href="css/output.css" rel="stylesheet" />
   </head>
-  <body class="relative h-full font-geist">
-    <!-- Header Section -->
+  <body class="font-geist">
     <header
       id="sticky-header"
       class="fixed top-0 z-[60] flex items-center justify-center w-full h-16 duration-500 ease-out bg-white border-b bg-opacity-90 backdrop-blur-md border-neutral-400 border-opacity-20"
@@ -469,140 +468,164 @@
       </div>
     </header>
 
-    <!-- Profile Section  -->
-    <main class="flex min-h-screen flex-col justify-center px-6 lg:px-8">
-      <div class="isolate bg-white px-6 py-12 sm:py-16 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center">
+    <!-- Dashboard  -->
+    <main class="mt-32 flex flex-col justify-center align-middle py-12">
+      <div class="mt-2">
+        <div class="sm:w-[650px] mx-auto w-full px-4 md:px-0">
           <h2
-            class="box-border m-0 text-3xl font-semibold leading-tight tracking-tight text-black border-solid sm:text-4xl md:text-5xl"
+            class="text-3xl font-semibold leading-9 tracking-tight text-gray-900"
           >
-            Profile
+            Good Morning Ashish!
           </h2>
-          <p class="mt-4 text-gray-500">
-            Aute magna irure deserunt veniam aliqua magna enim voluptate.
-          </p>
         </div>
-
-        <div class="mt-16 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form action="#" method="POST">
-            <h2 class="text-base font-semibold leading-7 text-gray-900">
-              Personal Info
-            </h2>
-            <p class="mt-1 text-sm leading-6 text-gray-600">
-              This information will be displayed publicly so be careful what you
-              share.
-            </p>
-
-            <div class="mt-6 space-y-2">
-              <div class="space-y-1">
-                <label
-                  class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  for="name"
-                >
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="Full Name"
-                  id="name"
-                  class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md peer border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
-                />
+        <div class="mt-4 px-4">
+          <div
+            class="sm:w-[650px] w-full mx-auto border border-gray-200 rounded-2xl"
+          >
+            <div class="p-4">
+              <div class="flex-auto">
+                <p class="text-2xl font-medium leading-6 text-gray-900">
+                  Frontend Cohort
+                </p>
+                <p class="mt-1 truncate text-sm leading-5 text-gray-500">
+                  By Ashish Shukla
+                </p>
               </div>
-              <div class="space-y-1">
-                <label
-                  class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  for="username"
-                >
-                  Email Address
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autocomplete="email"
-                  required
-                  placeholder="your@example.com"
-                  class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md peer border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
-                />
+
+              <div class="flex flex-col sm:flex-row gap-x-5 my-2">
+                <p>&centerdot; Starting on 26th Jan &centerdot;</p>
+                <p>&centerdot; 6 months &centerdot;</p>
               </div>
-              <div class="space-y-1">
-                <label
-                  class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  for="username"
+              <div class="flex flex-col sm:flex-row gap-3">
+                <div class="h-full grid grid-cols-2 gap-3 sm:flex">
+                  <button
+                    type="button"
+                    class="inline-flex items-center justify-center px-[30px] py-[14px] text-[15px] transition-colors duration-200 bg-white border rounded-[10px] border-neutral-700 text-neutral-950 hover:text-neutral-950 hover:bg-neutral-100 active:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-200/60 focus:shadow-outline"
+                  >
+                    Access Course
+                  </button>
+                  <button
+                    href=""
+                    class="inline-flex items-center justify-center px-[30px] py-[14px] text-[15px] transition-colors duration-200 bg-white border rounded-[10px] border-neutral-700 text-neutral-950 hover:text-neutral-950 hover:bg-neutral-100 active:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-200/60 focus:shadow-outline"
+                  >
+                    Details
+                  </button>
+                </div>
+                <button
+                  href=""
+                  class="inline-flex items-center justify-center gap-x-2 px-[30px] py-[14px] text-[15px] transition-colors duration-200 bg-orange-50 border rounded-[10px] border-orange-400 text-neutral-950 hover:text-neutral-950 hover:bg-orange-100 active:bg-white focus:bg-orange-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-200/60 focus:shadow-outline"
                 >
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  name="phone-number"
-                  id="phone-number"
-                  autocomplete="tel"
-                  placeholder="9XXXXXXXXX"
-                  class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md peer border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
-                />
+                  <img src="fsd.svg" class="h-5" alt="" />
+                  <span>Upgrade to Fullstack</span>
+                </button>
               </div>
             </div>
 
-            <h2 class="mt-12 text-base font-semibold leading-7 text-gray-900">
-              Educational Info
-            </h2>
-            <p class="mt-1 text-sm leading-6 text-gray-600">
-              This information will be displayed publicly so be careful what you
-              share.
-            </p>
-            <div class="mt-6 space-y-2">
-              <div class="space-y-1">
-                <label
-                  class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  for="your-school-college"
-                >
-                  Your School / College
-                </label>
-                <input
-                  id="your-school-college"
-                  name="your-school-college"
-                  type="text"
-                  autocomplete=""
-                  required
-                  placeholder="Banaras Hindu University"
-                  class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md peer border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
-                />
+            <div class="border-t border-gray-200"></div>
+            <div class="p-4">
+              <div class="flex-auto">
+                <p class="text-xl font-medium leading-6 text-gray-900">
+                  Upcoming: Orientation and Roadmap
+                </p>
               </div>
 
-              <div class="space-y-1">
-                <label
-                  class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  for="course"
-                >
-                  Course
-                </label>
-                <input
-                  id="course"
-                  name="course"
-                  type="text"
-                  autocomplete=""
-                  required
-                  placeholder="B.Tech"
-                  class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md peer border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
-                />
+              <div class="my-2">
+                <p>&centerdot; Starting in 45:00 minutes &centerdot;</p>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-3">
+                <div class="h-full grid sm:flex">
+                  <button
+                    type="button"
+                    class="inline-flex items-center justify-center px-[30px] py-[14px] text-[15px] transition-colors duration-200 bg-neutral-100 border rounded-[10px] border-neutral-700 text-neutral-950 hover:text-neutral-950 hover:bg-neutral-200 active:bg-white focus:bg-neutral-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-200/60 focus:shadow-outline"
+                  >
+                    Join Live Session
+                  </button>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="mt-4 px-4">
+          <div
+            class="sm:w-[650px] p-4 w-full mx-auto border border-gray-200 rounded-2xl"
+          >
+            <div class="flex-auto">
+              <p class="text-2xl font-medium leading-6 text-gray-900">
+                How to CSS
+              </p>
+              <p class="mt-1 truncate text-sm leading-5 text-gray-500">
+                By Ashish Shukla
+              </p>
+            </div>
 
-            <div class="mt-6 flex items-center justify-end">
+            <div class="flex flex-col sm:flex-row gap-x-5 my-2">
+              <p>&centerdot; Starting on 26th Jan &centerdot;</p>
+              <p>&centerdot; 6 months &centerdot;</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3">
               <button
                 type="button"
-                class="w-full inline-flex items-center justify-center px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none"
+                class="inline-flex items-center justify-center gap-x-2 px-[30px] py-[14px] text-[15px] text-white transition-colors duration-200 rounded-[10px] bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none"
               >
-                Save password
+                <img src="whatsapp.png" class="h-5" alt="" />
+                <span>Join Whatsapp Group</span>
               </button>
+              <div class="h-full grid grid-cols-2 gap-3 sm:flex">
+                <button
+                  href=""
+                  class="inline-flex items-center justify-center px-[30px] py-[14px] text-[15px] transition-colors duration-200 bg-white border rounded-[10px] text-neutral-500 hover:text-neutral-700 hover:bg-neutral-100 active:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-200/60 focus:shadow-outline"
+                >
+                  Recordings
+                </button>
+                <button
+                  href=""
+                  class="inline-flex items-center justify-center px-[30px] py-[14px] text-[15px] transition-colors duration-200 bg-white border rounded-[10px] text-neutral-500 hover:text-neutral-700 hover:bg-neutral-100 active:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-200/60 focus:shadow-outline"
+                >
+                  Certificate
+                </button>
+              </div>
             </div>
-          </form>
+          </div>
+        </div>
+
+        <!-- Invoice Card  -->
+        <div class="mt-4 px-4">
+          <div
+            class="sm:w-[650px] p-4 w-full mx-auto border border-gray-200 rounded-2xl"
+          >
+            <div class="grid grid-cols-2">
+              <div class="justify-self-start">
+                <div class="flex-auto">
+                  <p class="text-2xl font-medium leading-6 text-gray-900">
+                    How to CSS
+                  </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-x-4 my-2">
+                  <p class="text-xl items-center">₹ 17,999</p>
+                  <span class="hidden md:block text-2xl items-center"
+                    >&centerdot;</span
+                  >
+                  <p class="flex text-md text-gray-500 items-center">
+                    17th Nov 2023
+                  </p>
+                </div>
+              </div>
+              <div class="justify-self-end">
+                <a
+                  class="text-gray-700 hover:text-gray-900 cursor-pointer"
+                  href=""
+                  >Get Quote &nearr;</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
 
     <!-- Footer Section -->
-    <section class="bg-white w-full" id="footer">
+    <section class="bg-white">
       <div
         class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8"
       >

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile</title>
+    <title>Profile 3</title>
     <style>
       [x-cloak] {
         display: none;
@@ -15,8 +15,7 @@
     <!-- Include the TailwindCSS library on your page -->
     <link href="css/output.css" rel="stylesheet" />
   </head>
-  <body class="relative h-full font-geist">
-    <!-- Header Section -->
+  <body class="font-geist">
     <header
       id="sticky-header"
       class="fixed top-0 z-[60] flex items-center justify-center w-full h-16 duration-500 ease-out bg-white border-b bg-opacity-90 backdrop-blur-md border-neutral-400 border-opacity-20"
@@ -469,134 +468,116 @@
       </div>
     </header>
 
-    <!-- Profile Section  -->
-    <main class="flex min-h-screen flex-col justify-center px-6 lg:px-8">
-      <div class="isolate bg-white px-6 py-12 sm:py-16 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center">
-          <h2
-            class="box-border m-0 text-3xl font-semibold leading-tight tracking-tight text-black border-solid sm:text-4xl md:text-5xl"
-          >
-            Profile
-          </h2>
-          <p class="mt-4 text-gray-500">
-            Aute magna irure deserunt veniam aliqua magna enim voluptate.
-          </p>
+    <!-- Sign in Section  -->
+    <main
+      class="mt-32 flex flex-col justify-center align-middle px-6 py-12 lg:px-8"
+    >
+      <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+        <h2 class="text-2xl font-bold leading-9 tracking-tight text-gray-900">
+          Hey Ashish, Complete your profile!
+        </h2>
+      </div>
+
+      <div class="mt-2 sm:mx-auto sm:w-full sm:max-w-sm">
+        <div class="relative">
+          <div class="absolute flex items-center" aria-hidden="true">
+            <div class="w-full border-t border-gray-200"></div>
+          </div>
+          <div class="relative flex justify-cente text-md leading-6">
+            <span class="bg-white text-gray-500"
+              >Login to your account to see all your courses <br />
+              and upcoming classes.</span
+            >
+          </div>
         </div>
-
-        <div class="mt-16 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form action="#" method="POST">
-            <h2 class="text-base font-semibold leading-7 text-gray-900">
-              Personal Info
-            </h2>
-            <p class="mt-1 text-sm leading-6 text-gray-600">
-              This information will be displayed publicly so be careful what you
-              share.
-            </p>
-
-            <div class="mt-6 space-y-2">
+        <div class="relative w-full mt-2 content">
+          <!-- Tab Content 1 - Replace with your content -->
+          <div class="bg-card text-neutral-900 mt-5">
+            <div class="pt-0 space-y-2">
               <div class="space-y-1">
                 <label
                   class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                   for="name"
-                >
-                  Full Name
-                </label>
-                <input
+                  >Name</label
+                ><input
                   type="text"
-                  placeholder="Full Name"
+                  placeholder="Name"
                   id="name"
-                  class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md peer border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
+                  value="Adam Wathan"
+                  class="flex w-full h-10 px-3 py-6 text-sm bg-white border rounded-lg peer border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
                 />
               </div>
               <div class="space-y-1">
                 <label
                   class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                   for="username"
-                >
-                  Email Address
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autocomplete="email"
-                  required
-                  placeholder="your@example.com"
-                  class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md peer border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
-                />
-              </div>
-              <div class="space-y-1">
-                <label
-                  class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  for="username"
-                >
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  name="phone-number"
-                  id="phone-number"
-                  autocomplete="tel"
-                  placeholder="9XXXXXXXXX"
-                  class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md peer border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
+                  >Username</label
+                ><input
+                  type="text"
+                  placeholder="Username"
+                  id="username"
+                  value="@adamwathan"
+                  class="flex w-full h-10 px-3 py-6 text-sm bg-white border rounded-lg peer border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
                 />
               </div>
             </div>
-
-            <h2 class="mt-12 text-base font-semibold leading-7 text-gray-900">
-              Educational Info
-            </h2>
-            <p class="mt-1 text-sm leading-6 text-gray-600">
-              This information will be displayed publicly so be careful what you
-              share.
-            </p>
-            <div class="mt-6 space-y-2">
-              <div class="space-y-1">
-                <label
-                  class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  for="your-school-college"
-                >
-                  Your School / College
-                </label>
-                <input
-                  id="your-school-college"
-                  name="your-school-college"
-                  type="text"
-                  autocomplete=""
-                  required
-                  placeholder="Banaras Hindu University"
-                  class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md peer border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
-                />
-              </div>
-
-              <div class="space-y-1">
-                <label
-                  class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  for="course"
-                >
-                  Course
-                </label>
-                <input
-                  id="course"
-                  name="course"
-                  type="text"
-                  autocomplete=""
-                  required
-                  placeholder="B.Tech"
-                  class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md peer border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
-                />
-              </div>
-            </div>
-
-            <div class="mt-6 flex items-center justify-end">
+            <div class="flex items-center pt-0 mt-3">
               <button
                 type="button"
-                class="w-full inline-flex items-center justify-center px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none"
+                class="inline-flex items-center justify-center px-4 py-3 text-sm font-normal tracking-wide text-white transition-colors duration-200 rounded-lg bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none"
               >
-                Save password
+                Save changes
               </button>
             </div>
-          </form>
+          </div>
+        </div>
+        <div class="relative w-full mt-10 content">
+          <div class="bg-card text-neutral-900">
+            <div class="flex flex-col space-y-1.5">
+              <h3 class="text-lg font-semibold leading-none tracking-tight">
+                Educational info
+              </h3>
+              <p class="text-sm text-neutral-500">
+                Make changes to your account here. Click save when you're done.
+              </p>
+            </div>
+            <div class="pt-0 space-y-2 mt-5">
+              <div class="space-y-1">
+                <label
+                  class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  for="name"
+                  >Name</label
+                ><input
+                  type="text"
+                  placeholder="Name"
+                  id="name"
+                  value="Adam Wathan"
+                  class="flex w-full h-10 px-3 py-6 text-sm bg-white border rounded-lg peer border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
+                />
+              </div>
+              <div class="space-y-1">
+                <label
+                  class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  for="username"
+                  >Username</label
+                ><input
+                  type="text"
+                  placeholder="Username"
+                  id="username"
+                  value="@adamwathan"
+                  class="flex w-full h-10 px-3 py-6 text-sm bg-white border rounded-lg peer border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
+                />
+              </div>
+            </div>
+            <div class="flex items-center pt-0 mt-3">
+              <button
+                type="button"
+                class="inline-flex items-center justify-center px-4 py-3 text-sm font-normal tracking-wide text-white transition-colors duration-200 rounded-lg bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none"
+              >
+                Save changes
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </main>
