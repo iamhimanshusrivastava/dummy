@@ -1123,6 +1123,10 @@ select {
   margin-bottom: 0.75rem;
 }
 
+.-mt-2 {
+  margin-top: -0.5rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -1217,6 +1221,18 @@ select {
 
 .h-11 {
   height: 2.75rem;
+}
+
+.h-48 {
+  height: 12rem;
+}
+
+.h-60 {
+  height: 15rem;
+}
+
+.h-80 {
+  height: 20rem;
 }
 
 .min-h-screen {
@@ -1385,6 +1401,10 @@ select {
 
 .max-w-\[590px\] {
   max-width: 590px;
+}
+
+.max-w-80 {
+  max-width: 20rem;
 }
 
 .flex-1 {
